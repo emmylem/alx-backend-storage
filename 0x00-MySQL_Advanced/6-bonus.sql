@@ -7,10 +7,10 @@ BEGIN
     -- Insert the correction and create the project if it doesn't exist
     INSERT INTO corrections (user_id, project_id, score)
     VALUES (
-        p_user_id,
-        COALESCE((SELECT id FROM projects WHERE name = p_project_name), 
-                 (INSERT INTO projects (name) VALUES (p_project_name), LAST_INSERT_ID())),
-        p_score
+        user_id,
+        COALESCE((SELECT id FROM projects WHERE name = project_name), 
+                 (INSERT INTO projects (name) VALUES (project_name), LAST_INSERT_ID())),
+        score
     );
 END;
 $$
