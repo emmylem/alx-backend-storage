@@ -1,0 +1,3 @@
+// List all documents
+use my_db
+db.school.find()

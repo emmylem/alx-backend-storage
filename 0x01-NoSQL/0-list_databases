@@ -1,0 +1,13 @@
+// Connect to the MongoDB instance
+var conn = new Mongo();
+
+// Get the admin database
+var adminDB = conn.getDB("admin");
+
+// List all databases
+var databaseList = adminDB.runCommand({ listDatabases: 1 });
+
+// Print the database names
+databaseList.databases.forEach(function(db) {
+    print(db.name);
+});

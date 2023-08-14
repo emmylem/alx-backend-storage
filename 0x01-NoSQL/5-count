@@ -1,0 +1,3 @@
+// Count
+use my_db
+db.school.count()
