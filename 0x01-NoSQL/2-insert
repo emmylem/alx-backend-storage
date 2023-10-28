@@ -1,5 +1,6 @@
-// Inserts document.
-use my_db;
-
-// Insert a document into the "school" collection
-db.school.insert({ name: "Holberton school" });
+// Scrpit that inserts a Doc in the school Collection
+db.school.insert(
+	{
+		name:"Holberton school"
+	}
+)
